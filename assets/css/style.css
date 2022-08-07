@@ -23,9 +23,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 80vw;
-    min-height: 500px;
-    border: 2px solid #8B1A10;
+    margin: 40px 50px;
+    border: 1px solid #8B1A10;
 }
 
 .heading {
@@ -39,7 +38,7 @@ body {
     border: 1px solid black;
 }
 
-.sub {
+#sub {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,8 +79,29 @@ body {
 }
 
 /* Flex para manipular os articles das imagens */
-.display-images {
+#display-images {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-figure {
+    margin: 0 20px 40px 20px;
+}
+
+.image-figure .image {
+    margin: 20px 20px 0 20px;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 10%;
+    /* Mantem a imagem no tamnaho real, sem esticar */
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-figure .caption {
+    text-align: center;
 }
