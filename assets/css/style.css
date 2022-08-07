@@ -78,7 +78,7 @@ body {
     color: #F19E39;
 }
 
-/* Flex para manipular os articles das imagens */
+/* Flex para manipular os figures das imagens */
 #display-images {
     display: flex;
     align-items: center;
@@ -87,7 +87,7 @@ body {
 }
 
 .image-figure {
-    margin: 0 20px 40px 20px;
+    margin: 40px 20px 40px 20px;
 }
 
 .image-figure .image {
