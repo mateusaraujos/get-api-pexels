@@ -16,8 +16,29 @@ LOAD_BTN.addEventListener("click", async () => {
             }
         }) // Transforma os dados em JavaScript Object Notation
             .then(result => result.json())
-            .then(result => console.log(result));
+            .then(result => makeImages(result));
     } catch (erro) {
         console.log(erro.message);
     }
 });
+
+/**
+ * Função para criar todas as tags ao redor das imagens.
+ */
+const makeImages = (result) => {
+    // Para cada imagem que é recebida.
+    const novoArray = result.photos.map((image) => {
+        // Cria uma figure.image-figure.
+        const imageFigure = document.createElement("figure");
+        imageFigure.setAttribute("class", "image-figure");
+        // Cria a imagem dentro de figure.
+        imageFigure.innerHTML = `
+            <a href=${image.src.large} target="_blank">
+                <img class="image" src=${image.src.large} alt=${image.url}>
+            </a>
+            <figcaption class="caption">${image.photographer}</figcaption>
+        `;
+        // Coloca article dentro de section#display-images.
+        document.getElementById("display-images").appendChild(imageFigure);
+    });
+};
