@@ -1,0 +1,55 @@
+/* Roboto Slab font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;500&display=swap');
+
+/* Configurações iniciais */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: #F19E39;
+}
+
+/* Flex para centralizar todo o conteúdo (.center) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Flex para centralizar todo o conteúdo */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    min-height: 500px;
+    border: 2px solid #8B1A10;
+}
+
+.heading {
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #8B1A10;
+}
+
+.images-boxes {
+    border: 1px solid black;
+}
+
+#subtitle {
+    padding: 10px;
+    font-weight: 200;
+}
+
+#subtitle a:hover {
+    color: #8B1A10;
+}
+
+/* Flex para manipular os articles das imagens */
+.display-images {
+    display: flex;
+    flex-direction: column;
+}
