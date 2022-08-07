@@ -20,6 +20,11 @@ LOAD_BTN.addEventListener("click", async () => {
     } catch (erro) {
         console.log(erro.message);
     }
+
+    // Estilos da página após apertar o botão.
+    LOAD_BTN.style.display = "none";
+    document.getElementById("sub").style.flexDirection = "column";
+    document.getElementById("display-images").style.marginBottom = "30px";
 });
 
 /**
@@ -36,7 +41,7 @@ const makeImages = (result) => {
             <a href=${image.src.large} target="_blank">
                 <img class="image" src=${image.src.large} alt=${image.url}>
             </a>
-            <figcaption class="caption">${image.photographer}</figcaption>
+            <figcaption title=${image.photographer} class="caption">📷 ${image.photographer}</figcaption>
         `;
         // Coloca article dentro de section#display-images.
         document.getElementById("display-images").appendChild(imageFigure);
