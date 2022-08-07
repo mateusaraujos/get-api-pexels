@@ -106,6 +106,12 @@ body {
     text-align: center;
 }
 
+.linha {
+    height: 0.5px;
+    background-color: #8B1A10;
+    border: none;
+}
+
 .developer {
     display: flex;
     justify-content: space-around;
